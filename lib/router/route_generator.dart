@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 import 'package:bases_web/ui/views/counter_provider_view.dart';
 import 'package:bases_web/ui/views/counter_view.dart';
@@ -16,10 +15,10 @@ class RouteGenerator {
     switch( settings.name ) {
 
       case '/stateful':
-        return _fadeRoute( CounterView(), '/stateful' );
+        return _fadeRoute( CounterView(base: '0',), '/stateful' );
       
       case '/provider':
-        return _fadeRoute( CounterProviderView(), '/provider' );
+        return _fadeRoute( CounterProviderView(base: '0'), '/provider' );
 
       default:
         return _fadeRoute( View404(), '/404' );
